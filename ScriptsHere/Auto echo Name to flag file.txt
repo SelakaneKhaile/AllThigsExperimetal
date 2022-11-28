@@ -1,0 +1,8 @@
+$ export EDITOR=vi
+$ crontab -e
+# Edit this file to introduce tasks to be run by cron.
+1 * * * * echo "Cyber Codex" > flag.txt
+...
+...
+# [minute] [hours] [day of month] [month] [day of the week] command-to-execute
+Furthermore, the system administrator has all privileges to restrict cron access through /etc/cron.allow and /etc/cron.deny files.
