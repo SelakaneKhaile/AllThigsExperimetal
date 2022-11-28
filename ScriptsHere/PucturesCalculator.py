@@ -1,5 +1,6 @@
 # Python program for blending of
 # images using OpenCV
+#first install opencv (pip install opencv-python)
 
 # import OpenCV file
 import cv2
