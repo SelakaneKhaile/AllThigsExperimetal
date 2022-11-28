@@ -1,0 +1,71 @@
+Differnt categories
+
+Reverse Engenne:
+
+Tools to use
+1.https://hexed.it/
+2. imHex (windows app)
+3. raider2 (kali terminal too)
+4. ghidra (kali preferably)
+
+
+===============
+Commands to try on the files:
+strace ./"filename"
+ltrace ./"filename"
+readelf "filename"
+strings 'optional' "filename" | grep "what to search for 'if you want'"
+
+
+Forensics:
+
+1. FTK imager (disk analysis)
+2. Bento (for a few more things)
+
+Web:
+
+Burp suite is very important
+
+
+Network:
+
+1. Wireshark (network capture analysis)
+2. ImHex
+
+
+Crypto Enegma:
+
+We are to have a logic of using the tools and this tools should be used in giver order to solve the challenges
+One: Identify the cipher with one or more of this tools
+1. https://www.dcode.fr/cipher-identifier
+2. in kali use command hashid -m "hashString Or file path"
+Then to solove use this tools:
+1. hashcat -m hashid "hashString or file path" pathToWordList 
+2. Or use following online tools: 
+a) https://gchq.github.io/CyberChef/ (CyberChef)
+b. https://www.dcode.fr/
+c. https://crackstation.net/
+d. install https://github.com/hellman/xortool
+e. https://cryptii.com/
+f. https://hashes.com/en/decrypt/hash
+For more : https://dhanumaalaian.medium.com/online-tools-to-crack-ctf-contest-1ad7efa958da
+g. https://github.com/joaovdonaton/hashcracker.git
+1. https://quipqiup.com/ ( auto cypher solve)
+2. https://www.guballa.de/vigenere-solver
+3. https://github.com/hellman/xortool
+4. http://rumkin.com/tools/cipher/
+5. https://www.braingle.com/brainteasers/codes/polybius.php
+6. https://github.com/iagox86/hash_extender
+More crypto tools:
+https://github.com/devploit/ctf-awesome-resources#cryptography
+
+Steganography:
+
+Tool to use:
+1. https://github.com/zardus/ctf-tools/blob/master/stegsolve/install
+2. https://github.com/zed-0xff/zsteg
+3. https://www.kali.org/tools/foremost/
+3. https://stegonline.georgeom.net/upload
+4. https://www.kali.org/tools/binwalk/ 
+====================
+You may oalso try : strings "filename" | grep "what you are looking for if you want"

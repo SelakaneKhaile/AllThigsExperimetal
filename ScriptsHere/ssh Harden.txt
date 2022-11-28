@@ -1,0 +1,33 @@
+ssh hardening:
+		
+		config file for ssh is at: /etc/ssh/sshd_config
+		
+		Disable empty port: 
+					PermitEmptyPasswords no
+					
+		Change default ssh port in config file:
+					Port "new port"
+						
+						if you want:
+		Disable root login by root:
+					PermitRootLogin no 
+		
+		Disable ssh protocol 1:
+					Protocol 2 (which is the newer one)
+					
+		Config idle timeout interval:
+					ClientAliveInterval 300
+						and the count of alive broadcast:
+					ClientAliveCountMax 2
+					
+		Give acces to ssh to select users:
+					AllowUsers User1 User2
+					AllowGroup groupname
+		
+		Disable X11 Forwading:
+					X11Forwadong no
+		
+		Mitigating brut force attaks:
+					More ssh Security.
+					
+					

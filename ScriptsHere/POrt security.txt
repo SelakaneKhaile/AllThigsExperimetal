@@ -1,0 +1,41 @@
+list all open ports:
+				 netstat -lntu (same use as the below)
+				 
+look for ports:  ss -tl (tcp)
+				 ss -ul (udp)    or both
+	filter:
+		ss -ul | grep LISTEN
+		
+find service and it port:
+				ss -tuln (-n port number listening) | grep LISTEN
+				
+	CLOSE open poen:
+			sudo ss -tulnp (-p for name of service)
+			
+			to close:
+				sudo service "service name" stop
+				or
+				sudo systemctl "service name"
+
+look at the iptable rules like so:
+				/etc/iptable.conf
+				
+
+look for the fire wall used:
+
+				sudo which nft >/dev/null && echo nftables is enabled in this system || echo ufw is enabled in this system
+				
+					if it is anabled then add the following to config file:
+							located at : /etc/nftables.conf
+						  do this: 
+						  
+						  chain inbound {
+							...
+							tcp dport "(port or ports to be enabled sep by ",")" accept
+						  }
+
+to deny remote access:
+			sudo which nft >/dev/null && echo nftables is enabled in this system || echo ufw is enabled in this system
+			
+			to close port:
+				sudo ufw deny "port number"
